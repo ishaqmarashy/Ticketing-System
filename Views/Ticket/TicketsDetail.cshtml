@@ -1,0 +1,26 @@
+﻿@model Ticketing_System.Models.ErrorViewModel
+
+@{
+    ViewData["Title"] = "View";
+}
+<h1>Ticket Details</h1>
+<div>
+    <hr />
+    <dl class="row">
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.RequestId)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.RequestId)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.ShowRequestId)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.ShowRequestId)
+        </dd>
+    </dl>
+</div>
+<div>
+    <a asp-action="Index">Back to Search</a>
+</div>
