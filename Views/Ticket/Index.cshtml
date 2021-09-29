@@ -1,19 +1,15 @@
 ﻿@model Ticketing_System.Models.ErrorViewModel
-
-@{
-    ViewData["Title"] = "View";
-}
-
 <h1>Search for a ticket.</h1>
 <hr />
 <div class="row">
     <div class="col-md-4">
         <form asp-action="ProcessTicket">
+            <p> @ViewBag.prompt</p>           
             <div asp-validation-summary="ModelOnly" class="text-danger"></div>
             <div class="form-group">
                 <label asp-for="RequestId" class="control-label"></label>
                 <input asp-for="RequestId" placeholder="Enter Ticket ID" class="form-control" />
-                <span asp-validation-for="RequestId"  class="text-danger"></span>
+                <span asp-validation-for="RequestId" class="text-danger"></span>
             </div>
             <div class="form-group">
                 <input type="submit" value="Search" class="btn btn-primary" />

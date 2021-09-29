@@ -21,6 +21,7 @@ namespace Ticketing_System.Controllers
         {
             if (ticket.ShowRequestId)
                 return PartialView("TicketsDetail", ticket);
+            ViewBag.prompt = "Search field is empty.";
             return View("Index");
         }
 
