@@ -1,0 +1,17 @@
+﻿@using System.Data
+@using System.Net
+@using Newtonsoft.Json.Linq
+@using Ticketing_System.Controllers
+@model Ticketing_System.Models.ErrorViewModel
+<div>
+    <h4>My Tickets</h4>
+    <hr />
+    <dl class="row">
+        @Html.Raw(@WebUtility.HtmlDecode(ViewData["data"].ToString()))
+    </dl>
+</div>
+<div>
+    <a asp-action="Index">Back to Search</a>
+</div>
+<script src="~/js/tableButton.js" asp-append-version="true"></script>
+

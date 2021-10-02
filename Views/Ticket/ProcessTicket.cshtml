@@ -1,0 +1,12 @@
+﻿@using System.Net
+@model Ticketing_System.Models.ErrorViewModel
+
+<div>
+    <h4>Ticket Details</h4>
+    <hr />
+    <dl class="row">
+        @Html.Raw(@WebUtility.HtmlDecode(ViewData["data"].ToString()))
+    </dl>
+</div><div>
+
+</div>
