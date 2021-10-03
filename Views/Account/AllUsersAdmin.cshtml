@@ -1,0 +1,12 @@
+﻿@using System.Data
+@using System.Net
+@using Newtonsoft.Json.Linq
+@using Ticketing_System.Controllers
+@model Ticketing_System.Models.ErrorViewModel
+<h4>My Tickets</h4>
+<hr />
+<div class="row">
+    @Html.Raw(@WebUtility.HtmlDecode(ViewData["data"].ToString()))
+</div>
+
+<script src="~/js/tableAdminButtonAccount.js" asp-append-version="true"></script>

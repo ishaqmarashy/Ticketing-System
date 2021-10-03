@@ -28,7 +28,7 @@ namespace Ticketing_System.Controllers
 
         [Route("/Account/Login")]
         [HttpGet("Login")]
-        public IActionResult Index(string? returnUrl)
+        public IActionResult Login (string? returnUrl)
         {
             ViewData["ReturnUrl"] = returnUrl;
             return View();
@@ -42,7 +42,7 @@ namespace Ticketing_System.Controllers
         public async Task<IActionResult> Logout()
         {
             await HttpContext.SignOutAsync();
-            return View("Index");
+            return RedirectToAction("Login");
         }
         [HttpPost("Login")]
         public async Task<IActionResult> ProcessLogin(LoginModel user,string? returnUrl)
@@ -62,11 +62,11 @@ namespace Ticketing_System.Controllers
                 var claimsIdentity = new ClaimsIdentity(claims,CookieAuthenticationDefaults.AuthenticationScheme);
                 var claimsPrincipal = new ClaimsPrincipal(claimsIdentity);
                 await HttpContext.SignInAsync(claimsPrincipal);
-                return RedirectToAction("Index","Ticket");
+                return RedirectToAction("MyTickets","Ticket");
             }
             else
                 ViewData["data"] = "Incorrect Login Credentials";
-            return View("Index");
+            return View("Login");
         }
         [HttpPost("Register")]
         public IActionResult ProcessRegistration(LoginModel user)
@@ -84,9 +84,26 @@ namespace Ticketing_System.Controllers
                     return View("Register");
                 }
             }
-            return View("Index");
+            return View("Login");
         }
         //used for converting passwords into md5, which is stored into the db.
+        [Authorize(Roles = "ADMIN")]
+        [Route("Account/Delete/{id}")]
+        [HttpGet]
+        public Boolean Delete(string id)
+        {
+            DbAccess db = new DbAccess(_configuration);
+            String queryStr = "DELETE FROM USERS WHERE UNAME=\"" + id + "\";";
+            return db.Post(queryStr);
+        }
+        public IActionResult AllUsersAdmin()
+        {
+            DbAccess db = new DbAccess(_configuration);
+            string queryStr = "SELECT * FROM USERS";
+            JArray Jar=db.Get(queryStr);
+            ViewData["data"]=TicketController.BuildTable(Jar,0,1);
+            return View();
+        } 
         public static string CreateMd5(string input)
         {
             using (System.Security.Cryptography.MD5 md5 = System.Security.Cryptography.MD5.Create())

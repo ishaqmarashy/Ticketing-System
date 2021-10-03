@@ -8,12 +8,11 @@
 <p>@ViewData["id"]</p>
 <hr />
 <div class="row">
-        @Html.Raw(@WebUtility.HtmlDecode(ViewData["data"].ToString()))
+    @Html.Raw(@WebUtility.HtmlDecode(ViewData["data"].ToString()))
 </div>
 
 <div>
     <a asp-action="SearchTicket">Back to Search</a>
 </div>
 
-<script src="~/js/tableButton.js" asp-append-version="true"></script>
-
+<script src="~/js/tableAdminButton.js" asp-append-version="true"></script>

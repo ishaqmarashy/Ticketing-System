@@ -1,0 +1,36 @@
+﻿@model Ticketing_System.Models.TicketModel
+
+<h4>Edit a Ticket</h4>
+<hr />
+<p>
+    @ViewData["data"]
+    @{TempData["id"] = ViewData["id"];}
+    </p>
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="ProcessUpdateAdmin">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <label for="State">Ticket Status:</label>
+            <select asp-for="State" id="State" name="State">
+                <option value="OPEN">OPEN</option>           
+                <option value="PROCESSING">PROCESSING</option>
+                <option value="CLOSED">CLOSED</option>
+            </select> 
+            <div class="form-group">
+                <label class="control-label">Enter the Updated Text</label>
+                <textarea asp-for="Complaint" class="form-control"></textarea>
+                <span asp-validation-for="Complaint" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Update" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+<div>
+    <a asp-action="MyTicketsAdmin">Back to All Tickets</a>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}

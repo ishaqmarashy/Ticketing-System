@@ -1,12 +1,13 @@
 ﻿@using System.Net
 @model Ticketing_System.Models.ErrorViewModel
 
-<div>
-    <h4>Ticket Details</h4>
-    <hr />
-    <dl class="row">
-        @Html.Raw(@WebUtility.HtmlDecode(ViewData["data"].ToString()))
-    </dl>
-</div><div>
 
+<h4>Ticket Details</h4>
+<hr />
+<div class="row">
+        @Html.Raw(@WebUtility.HtmlDecode(ViewData["data"].ToString()))
+</div>
+
+<div>
+    <a asp-action="SearchTicket">Back to Search</a>
 </div>

@@ -5,7 +5,7 @@ for (var i = 0; i <= buttons.length; i += 1) {
             document.getElementById(this.name).remove();
             doPost("/Ticket/Delete/"+this.id);
         }else {
-            location.href = "/Ticket/Update/"+this.id;
+            location.href = "/Ticket/UpdateAdmin/"+this.id;
         }
     };
 

@@ -3,13 +3,16 @@ for (var i = 0; i <= buttons.length; i += 1) {
     buttons[i].onclick = function (e) {
         if (this.value == "DELETE"){
             document.getElementById(this.name).remove();
-            doPost("/Ticket/Delete/"+this.id);
+            if (this.id != "admin");
+            doPost("/Account/Delete/"+this.id);
         }else {
-            location.href = "/Ticket/Update/"+this.id;
+            location.href = "/Account/UpdateAdmin/"+this.id;
         }
     };
 
 }
 function doPost(url) {
-    $.getJSON(url, function (data) {});
+    $.getJSON(url, function (data) {
+        alert(data);
+    });
 }
