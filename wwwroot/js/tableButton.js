@@ -4,7 +4,7 @@ for (var i = 0; i <= buttons.length; i += 1) {
         if (this.value == "DELETE") {
             document.getElementById(this.name).remove();
             doPost("/Ticket/Delete/" + this.id);
-        } else {
+        } else if(this.value == "UPDATE"){
             location.href = "/Ticket/Update/" + this.id;
         }
     };
