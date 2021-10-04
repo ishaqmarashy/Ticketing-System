@@ -1,11 +1,13 @@
 ﻿@model Ticketing_System.Models.ErrorViewModel
-
+@{
+    ViewData["Title"] = "Update Ticket Page";
+}
 <h4>Edit a Ticket</h4>
 <hr />
 <p>
     @ViewData["data"]
     @{TempData["id"] = ViewData["id"];}
-    </p>
+</p>
 <div class="row">
     <div class="col-md-4">
         <form asp-action="ProcessUpdate">

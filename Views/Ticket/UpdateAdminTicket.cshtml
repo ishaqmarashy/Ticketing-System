@@ -1,21 +1,23 @@
 ﻿@model Ticketing_System.Models.TicketModel
-
+@{
+    ViewData["Title"] = "Update Admin Ticket Page";
+}
 <h4>Edit a Ticket</h4>
 <hr />
 <p>
     @ViewData["data"]
     @{TempData["id"] = ViewData["id"];}
-    </p>
+</p>
 <div class="row">
     <div class="col-md-4">
         <form asp-action="ProcessUpdateAdmin">
             <div asp-validation-summary="ModelOnly" class="text-danger"></div>
             <label for="State">Ticket Status:</label>
             <select asp-for="State" id="State" name="State">
-                <option value="OPEN">OPEN</option>           
+                <option value="OPEN">OPEN</option>
                 <option value="PROCESSING">PROCESSING</option>
                 <option value="CLOSED">CLOSED</option>
-            </select> 
+            </select>
             <div class="form-group">
                 <label class="control-label">Enter the Updated Text</label>
                 <textarea asp-for="Complaint" class="form-control"></textarea>

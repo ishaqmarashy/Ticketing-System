@@ -13,6 +13,5 @@ for (var i = 0; i <= buttons.length; i += 1) {
 }
 function doPost(url) {
     $.getJSON(url, function (data) {
-        alert(data);
     });
 }

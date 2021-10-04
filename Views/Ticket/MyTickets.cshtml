@@ -3,12 +3,17 @@
 @using Newtonsoft.Json.Linq
 @using Ticketing_System.Controllers
 @model Ticketing_System.Models.ErrorViewModel
+@{
+    ViewData["Title"] = "My Tickets Page";
+}
 <h4>My Tickets</h4>
 <p>@TempData["update"]</p>
 <p>@ViewData["id"]</p>
 <hr />
 <div class="row">
+    <div class="col-md-4">
         @Html.Raw(@WebUtility.HtmlDecode(ViewData["data"].ToString()))
+    </div>
 </div>
 
 <div>

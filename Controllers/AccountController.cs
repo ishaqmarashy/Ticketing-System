@@ -18,6 +18,7 @@ using Ticketing_System.DataAccess;
 
 namespace Ticketing_System.Controllers
 {
+    
     public class AccountController : Controller
     {
         private readonly IConfiguration _configuration;
@@ -96,12 +97,13 @@ namespace Ticketing_System.Controllers
             String queryStr = "DELETE FROM USERS WHERE UNAME=\"" + id + "\";";
             return db.Post(queryStr);
         }
+        [Authorize(Roles = "ADMIN")]
         public IActionResult AllUsersAdmin()
         {
             DbAccess db = new DbAccess(_configuration);
             string queryStr = "SELECT * FROM USERS";
             JArray Jar=db.Get(queryStr);
-            ViewData["data"]=TicketController.BuildTable(Jar,0,1);
+            ViewData["data"]=TableBuilder.Build(Jar,0,1);
             return View();
         } 
         public static string CreateMd5(string input)

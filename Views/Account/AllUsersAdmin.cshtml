@@ -3,10 +3,15 @@
 @using Newtonsoft.Json.Linq
 @using Ticketing_System.Controllers
 @model Ticketing_System.Models.ErrorViewModel
+@{
+    ViewData["Title"] = "All Users Page";
+}
 <h4>My Tickets</h4>
 <hr />
 <div class="row">
-    @Html.Raw(@WebUtility.HtmlDecode(ViewData["data"].ToString()))
+    <div class="col-md-4">
+        @Html.Raw(@WebUtility.HtmlDecode(ViewData["data"].ToString()))
+    </div>
 </div>
 
 <script src="~/js/tableAdminButtonAccount.js" asp-append-version="true"></script>

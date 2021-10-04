@@ -1,10 +1,13 @@
 ﻿@model Ticketing_System.Models.LoginModel
-
+@{
+    ViewData["Title"] = "Login Page";
+}
 <h4>Login</h4>
 @{
     var returnUrl = ViewData["ReturnUrl"] as string;
-    if (!string.IsNullOrEmpty(returnUrl)){
-    <p>You Must Login to Access the @returnUrl.Substring(1) Page</p>}
+    if (!string.IsNullOrEmpty(returnUrl))
+    {
+        <p>You Must Login to Access the @returnUrl.Substring(1) Page</p>}
 }
 <p>@ViewData["data"]</p>
 <hr />

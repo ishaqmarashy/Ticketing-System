@@ -2,7 +2,24 @@
     ViewData["Title"] = "Home Page";
 }
 
-<div class="text-center">
-    <!-->Write something about the system here</!-->
-    <p>Explaination here</p>
+<div >
+    <p>
+        This tool is designed for bug tracking and keeping track of the issues users are having.
+        The users can view, edit and create new tickets(limited CRUD operation accessibility).
+        Admins have a much higher level of access as they can edit, view and delete both tickets and users through administrative views.
+    </p>
+    <p>
+       Note you will only have access to these pages after signing in. 
+    </p>
 </div>
+<p>General permissions after login:</p>
+<ul>
+    <li>Search Tickets, allows authorized users to view tickets across the database. </li>
+    <li>Create Tickets, allows authorized users to create tickets that are attached to their unique username in the mysql database. </li>
+    <li>My Tickets, displays tickets that are created by the user. </li>
+</ul>
+<p>Extended permissions after admin login:</p>
+<ul>
+    <li>All Tickets, allows the admin to view all the tickets across the database, and the user that created the ticket. The admin can alter the ticket details and set the status of the ticket to processing,open or closed accordingly. </li>
+    <li>All Users, allows the admin to view all the users across the database and delete them. </li>
+</ul>
