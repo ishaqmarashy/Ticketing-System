@@ -135,7 +135,7 @@ namespace Ticketing_System.Controllers
             JArray Jar = db.Get(queryString);
             queryString = (TableBuilder.Build(Jar, 1, 0));
             if (queryString == "Invalid Input")
-                ViewData["data"] = "<div>You Have no Tickets</div>";
+                ViewData["data"] = "<p>You have no tickets</p>";
             else ViewData["data"] = queryString;
             return View();
         }
@@ -147,7 +147,7 @@ namespace Ticketing_System.Controllers
             JArray Jar = db.Get(queryString);
             queryString = (TableBuilder.Build(Jar, 1, 2));
             if (queryString == "Invalid Input")
-                ViewData["data"] = "<div>There are Tickets</div>";
+                ViewData["data"] = "<p>There are no tickets</p>";
             else ViewData["data"] = queryString;
             return View("AdminAllTickets");
         }
