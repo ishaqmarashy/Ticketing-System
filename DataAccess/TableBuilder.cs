@@ -21,7 +21,7 @@ namespace Ticketing_System.DataAccess
             }
             try
             {
-                var result = " <table id=\"myTable\" class=\"table table-bordered\" style=\"height: 100 %; width: 100 %;\" >   <thead>";
+                var result = " <table id=\"myTable\" class=\"table table-striped\" style=\"height: 100 %; width: 100 %;\" >   <thead>";
                 int i = 0;
                 result += " <tr> ";
                 result += " <th scope=\"col\"> ROW </th>";
@@ -69,12 +69,15 @@ namespace Ticketing_System.DataAccess
                     if (postFixed)
                     {
                         result += " <th scope=\"row\">";
+                        string btnUpdate = "<button class=\"btn btn-primary ripple-surface\" id=\"" +
+                                           identifierMod + "\" name=\"" + i + "\" value=\"UPDATE\">UPDATE</button>";
+                        string btnDelete = "<button class=\"btn btn-primary ripple-surface\" id=\"" +
+                                           identifierMod + "\" name=\"" + i + "\" value=\"DELETE\">DELETE</button>";
                         if (access == 0)
-                            result += "<button id=\"" + identifierMod + "\" name=\"" + i + "\" value=\"UPDATE\">UPDATE</button>";
+                            result += btnUpdate;
                         else if (access == 1)
-                            result += "<button id=\"" + identifierMod + "\" name=\"" + i + "\" value=\"DELETE\">DELETE</button>";
-                        else result += "<button  id=\"" + identifierMod + "\" name=\"" + i + "\" value=\"UPDATE\">UPDATE</button> " +
-                                       "</th><th> <button id=\"" + identifierMod + "\" name=\"" + i + "\" value=\"DELETE\">DELETE</button>";
+                            result += btnDelete;
+                        else result += btnUpdate + "</th><th>" + btnDelete;
                         result += "</th>";
                     }
                     result += " </tr>";

@@ -3,22 +3,27 @@
 }
 
 <div >
+    @{var returnUrl = ViewData["ReturnUrl"] as string;
+        if (!string.IsNullOrEmpty(returnUrl))
+        {
+            <p style='color: red'>Higher Authorization Level is Need to Access @returnUrl.Substring(1) Page</p>}}
+    @ViewData["data"]
     <p>
         This tool is designed for bug tracking and keeping track of the issues users are having.
         The users can view, edit and create new tickets(limited CRUD operation accessibility).
         Admins have a much higher level of access as they can edit, view and delete both tickets and users through administrative views.
     </p>
     <p>
-       Note you will only have access to these pages after signing in. 
+        Note you will only have access to these pages after signing in.
     </p>
 </div>
-<p>General permissions after login:</p>
+<h4>General Permissions After Login:</h4>
 <ul>
     <li>Search Tickets, allows authorized users to view tickets across the database. </li>
     <li>Create Tickets, allows authorized users to create tickets that are attached to their unique username in the mysql database. </li>
     <li>My Tickets, displays tickets that are created by the user. </li>
 </ul>
-<p>Extended permissions after admin login:</p>
+<h4>Extended Permissions After Admin Login:</h4>
 <ul>
     <li>All Tickets, allows the admin to view all the tickets across the database, and the user that created the ticket. The admin can alter the ticket details and set the status of the ticket to processing,open or closed accordingly. </li>
     <li>All Users, allows the admin to view all the users across the database and delete them. </li>

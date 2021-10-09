@@ -6,12 +6,15 @@
 @{
     ViewData["Title"] = "All Users Page";
 }
-<h4>My Tickets</h4>
+<h4>All Users</h4>
 <hr />
+<p>User Tickets Must Be Cleared for the changes to Commit</p>
 <div class="row">
     <div class="col-md-4">
         @Html.Raw(@WebUtility.HtmlDecode(ViewData["data"].ToString()))
     </div>
 </div>
-
+<div>
+    <a class="btn btn-primary ripple-surface" style="min-width: 95px;" asp-action="AllUsersAdmin">Refresh</a>
+</div>
 <script src="~/js/tableAdminButtonAccount.js" asp-append-version="true"></script>

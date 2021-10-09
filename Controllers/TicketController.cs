@@ -32,7 +32,7 @@ namespace Ticketing_System.Controllers
             JArray Jar = db.Get(queryStr);
             queryStr = (TableBuilder.Build(Jar, null, null));
             if (queryStr == "Invalid Input")
-                ViewData["data"] = "<div>No Such Ticket</div>";
+                ViewData["data"] = "<div>Ticket does not exist</div>";
             else ViewData["data"] = queryStr;
             return View();
         }
@@ -50,7 +50,7 @@ namespace Ticketing_System.Controllers
         [HttpGet]
         public IActionResult Update(string id)
         {
-            ViewData["data"] = "Editing Ticket " + id + "'s Complaint";
+            ViewData["data"] = "Editing ticket ID:" + id + "'s complaint";
             ViewData["id"] = id;
             TempData["id"] = id;
             return View("UpdateTicket");
@@ -61,7 +61,7 @@ namespace Ticketing_System.Controllers
         [HttpGet]
         public IActionResult UpdateAdmin(string id)
         {
-            ViewData["data"] = "Editing Ticket " + id + "'s Complaint";
+            ViewData["data"] = "Editing ticket " + id + "'s Complaint";
             TempData["id"] = id;
             ViewData["id"] = id;
             return View("UpdateAdminTicket");
@@ -73,9 +73,9 @@ namespace Ticketing_System.Controllers
             string queryString = "UPDATE TICKETS SET COMPLAINT=\"" + ticket.RequestId
                                                                    + "\" WHERE ID=" + id + ";";
             if (db.Post(queryString))
-                TempData["update"] = "Ticket ID:" + id + " Has Been Updated";
+                TempData["update"] = "Ticket ID:" + id + " has been updated";
             else
-                TempData["update"] = ticket.RequestId + " Failed to Update Ticket ID:" + id;
+                TempData["update"] = ticket.RequestId + " Failed to update ticket ID:" + id;
             return RedirectToAction("MyTickets");
         }
         [Authorize(Roles = "ADMIN")]
@@ -88,7 +88,7 @@ namespace Ticketing_System.Controllers
                                  "STATES_TSTATE=\"" + ticket.State + "\" " +
                                  "WHERE ID=" + id + ";";
             if (db.Post(queryString))
-                TempData["update"] = "Ticket ID:" + id + " Has Been Updated";
+                TempData["update"] = "Ticket ID:" + id + " has been updated";
             else
                 TempData["update"] = queryString + ticket.State + " Failed to Update Ticket ID:" + id;
             return RedirectToAction("MyTicketsAdmin");
@@ -107,7 +107,7 @@ namespace Ticketing_System.Controllers
                 queryString = "SELECT * FROM TICKETS WHERE TICKETS.COMPLAINT =\"" + ticket.RequestId + "\" AND TICKETS.STATES_TSTATE=\"OPEN\";";
                 JArray array = db.Get(queryString);
                 string ticketID = array[0]["ID"].ToString();
-                ViewData["data"] = "Ticket Created Successfully! Your Tickets is ID: " + ticketID;
+                ViewData["data"] = "Ticket created successfully! Your tickets ID is: " + ticketID;
                 queryString = "INSERT INTO UID VALUES (" + ticketID + ",\"" + User.Identity.Name + "\");";
                 Succuss = db.Post(queryString);
                 if (Succuss)
@@ -116,12 +116,12 @@ namespace Ticketing_System.Controllers
                 }
                 else
                 {
-                    ViewData["data"] = "Empty Ticket";
+                    ViewData["data"] = "empty ticket";
                 }
             }
             else
             {
-                ViewData["data"] = "Failed to Create Ticket";
+                ViewData["data"] = "failed to create ticket";
             }
 
 

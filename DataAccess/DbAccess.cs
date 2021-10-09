@@ -16,14 +16,14 @@ namespace Ticketing_System.DataAccess
             _configuration = configuration;
         }
         [HttpPost]
-        public Boolean Post(string QueryStr)
+        public Boolean Post(string queryStr)
         {
             Boolean cond;
-            JsonResult json = MakeRequest(QueryStr);
+            JsonResult json = MakeRequest(queryStr);
             JObject o = JObject.Parse(JsonConvert.SerializeObject(json));
             try
             {
-                Array thing = o["Value"].ToObject<String[]>();
+                Array hasResult = o["Value"].ToObject<string[]>();
                 cond = true;
             }
             catch (Exception e)
@@ -33,11 +33,11 @@ namespace Ticketing_System.DataAccess
             return cond;
         }
         [HttpGet]
-        public JArray Get(string QueryStr)
+        public JArray Get(string queryStr)
         {
             try
             {
-                JsonResult json = MakeRequest(QueryStr);
+                JsonResult json = MakeRequest(queryStr);
                 JObject o = JObject.Parse(JsonConvert.SerializeObject(json));
                 var result = (o["Value"].ToString());
                 JArray Jar = JArray.Parse(result);

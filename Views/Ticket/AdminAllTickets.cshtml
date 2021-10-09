@@ -6,7 +6,7 @@
 @{
     ViewData["Title"] = "All Tickets Page";
 }
-<h4>My Tickets</h4>
+<h4>All Tickets</h4>
 <p>@TempData["update"]</p>
 <p>@ViewData["id"]</p>
 <hr />
@@ -18,7 +18,7 @@
 </div>
 
 <div>
-    <a asp-action="SearchTicket">Back to Search</a>
+    <a class="btn btn-primary ripple-surface" style="min-width: 95px;" asp-action="MyTicketsAdmin">Refresh</a>
 </div>
 
 <script src="~/js/tableAdminButton.js" asp-append-version="true"></script>
