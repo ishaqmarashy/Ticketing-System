@@ -1,4 +1,4 @@
-﻿@model Ticketing_System.Models.ErrorViewModel
+﻿@model Ticketing_System.Models.TicketInput
 @{
     ViewData["Title"] = "Search Ticket Page";
 }
@@ -12,8 +12,8 @@
             <div asp-validation-summary="ModelOnly" class="text-danger"></div>
             <div class="form-group">
                 <label class="control-label">Enter Ticket ID</label>
-                <input asp-for="RequestId" id="SearchTicket" placeholder="Enter Ticket ID" class="form-control"/>
-                <span asp-validation-for="RequestId" class="text-danger"></span>
+                <input asp-for="Complaint" id="SearchTicket" placeholder="Enter Ticket ID" class="form-control"/>
+                <span asp-validation-for="Complaint" class="text-danger"></span>
             </div>
             <div class="form-group">
                 <input type="submit" value="Search" class="btn btn-primary"/>

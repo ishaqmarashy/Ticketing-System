@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "OrdwtCaVqQx/Snj2OXu6kWpaX8KGEqGxQWM/28/M2WZLfdWdErSg3hh6nub2eakb/IXMsxaJRjwBl5t6U/c+qg==",
+  "dgSpecHash": "xh4qEMyNDPUkTo+3su4nTf/5bIArqPBJ2oYv5C1ZyG0O6+Dyg1Fv6pbuu64OsNOwpGCU4xvac6Y+luAN9Dsi+Q==",
   "success": true,
   "projectFilePath": "C:\\Users\\ishaq\\source\\repos\\Ticketing System Solution\\Ticketing System\\Ticketing System.csproj",
   "expectedPackageFiles": [
@@ -62,7 +62,6 @@
     "C:\\Users\\ishaq\\.nuget\\packages\\mysql.data\\8.0.26\\mysql.data.8.0.26.nupkg.sha512",
     "C:\\Users\\ishaq\\.nuget\\packages\\netstandard.library\\1.6.1\\netstandard.library.1.6.1.nupkg.sha512",
     "C:\\Users\\ishaq\\.nuget\\packages\\newtonsoft.json\\11.0.2\\newtonsoft.json.11.0.2.nupkg.sha512",
-    "C:\\Users\\ishaq\\.nuget\\packages\\npgsql\\5.0.10\\npgsql.5.0.10.nupkg.sha512",
     "C:\\Users\\ishaq\\.nuget\\packages\\nuget.frameworks\\4.7.0\\nuget.frameworks.4.7.0.nupkg.sha512",
     "C:\\Users\\ishaq\\.nuget\\packages\\runtime.debian.8-x64.runtime.native.system.security.cryptography.openssl\\4.3.0\\runtime.debian.8-x64.runtime.native.system.security.cryptography.openssl.4.3.0.nupkg.sha512",
     "C:\\Users\\ishaq\\.nuget\\packages\\runtime.fedora.23-x64.runtime.native.system.security.cryptography.openssl\\4.3.0\\runtime.fedora.23-x64.runtime.native.system.security.cryptography.openssl.4.3.0.nupkg.sha512",
@@ -134,7 +133,7 @@
     "C:\\Users\\ishaq\\.nuget\\packages\\system.resources.resourcemanager\\4.3.0\\system.resources.resourcemanager.4.3.0.nupkg.sha512",
     "C:\\Users\\ishaq\\.nuget\\packages\\system.runtime\\4.3.0\\system.runtime.4.3.0.nupkg.sha512",
     "C:\\Users\\ishaq\\.nuget\\packages\\system.runtime.caching\\4.7.0\\system.runtime.caching.4.7.0.nupkg.sha512",
-    "C:\\Users\\ishaq\\.nuget\\packages\\system.runtime.compilerservices.unsafe\\4.6.0\\system.runtime.compilerservices.unsafe.4.6.0.nupkg.sha512",
+    "C:\\Users\\ishaq\\.nuget\\packages\\system.runtime.compilerservices.unsafe\\4.5.2\\system.runtime.compilerservices.unsafe.4.5.2.nupkg.sha512",
     "C:\\Users\\ishaq\\.nuget\\packages\\system.runtime.extensions\\4.3.0\\system.runtime.extensions.4.3.0.nupkg.sha512",
     "C:\\Users\\ishaq\\.nuget\\packages\\system.runtime.handles\\4.3.0\\system.runtime.handles.4.3.0.nupkg.sha512",
     "C:\\Users\\ishaq\\.nuget\\packages\\system.runtime.interopservices\\4.3.0\\system.runtime.interopservices.4.3.0.nupkg.sha512",

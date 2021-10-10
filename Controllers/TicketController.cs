@@ -1,10 +1,5 @@
 using Microsoft.AspNetCore.Mvc;
-using Microsoft.Extensions.Logging;
 using System;
-using System.Collections.Generic;
-using System.Diagnostics;
-using System.Linq;
-using System.Threading.Tasks;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.Extensions.Configuration;
 using Newtonsoft.Json.Linq;
@@ -25,10 +20,10 @@ namespace Ticketing_System.Controllers
         {
             return View();
         }
-        public IActionResult ProcessTicket(ErrorViewModel search)
+        public IActionResult ProcessTicket(TicketInput search)
         {
             DbAccess db = new DbAccess(_configuration);
-            string queryStr = " SELECT * FROM UTICKETS WHERE UTICKETS.ID=\"" + search.RequestId + "\";";
+            string queryStr = " SELECT * FROM UTICKETS WHERE UTICKETS.ID=\"" + search.Complaint + "\";";
             JArray Jar = db.Get(queryStr);
             queryStr = (TableBuilder.Build(Jar, null, null));
             if (queryStr == "Invalid Input")
@@ -66,16 +61,16 @@ namespace Ticketing_System.Controllers
             ViewData["id"] = id;
             return View("UpdateAdminTicket");
         }
-        public IActionResult ProcessUpdate(ErrorViewModel ticket)
+        public IActionResult ProcessUpdate(TicketInput ticket)
         {
             DbAccess db = new DbAccess(_configuration);
             var id = TempData["id"];
-            string queryString = "UPDATE TICKETS SET COMPLAINT=\"" + ticket.RequestId
+            string queryString = "UPDATE TICKETS SET COMPLAINT=\"" + ticket.Complaint
                                                                    + "\" WHERE ID=" + id + ";";
             if (db.Post(queryString))
                 TempData["update"] = "Ticket ID:" + id + " has been updated";
             else
-                TempData["update"] = ticket.RequestId + " Failed to update ticket ID:" + id;
+                TempData["update"] = ticket.Complaint + " Failed to update ticket ID:" + id;
             return RedirectToAction("MyTickets");
         }
         [Authorize(Roles = "ADMIN")]
@@ -97,14 +92,14 @@ namespace Ticketing_System.Controllers
         {
             return View();
         }
-        public IActionResult ProcessCreateTicket(ErrorViewModel ticket)
+        public IActionResult ProcessCreateTicket(TicketInput ticket)
         {
             DbAccess db = new DbAccess(_configuration);
-            String queryString = " INSERT INTO TICKETS (COMPLAINT,STATES_TSTATE) VALUES (\"" + ticket.RequestId + "\",\"OPEN\"); ";
+            String queryString = " INSERT INTO TICKETS (COMPLAINT,STATES_TSTATE) VALUES (\"" + ticket.Complaint + "\",\"OPEN\"); ";
             Boolean Succuss = db.Post(queryString);
             if (Succuss)
             {
-                queryString = "SELECT * FROM TICKETS WHERE TICKETS.COMPLAINT =\"" + ticket.RequestId + "\" AND TICKETS.STATES_TSTATE=\"OPEN\";";
+                queryString = "SELECT * FROM TICKETS WHERE TICKETS.COMPLAINT =\"" + ticket.Complaint + "\" AND TICKETS.STATES_TSTATE=\"OPEN\";";
                 JArray array = db.Get(queryString);
                 string ticketID = array[0]["ID"].ToString();
                 ViewData["data"] = "Ticket created successfully! Your tickets ID is: " + ticketID;

@@ -1,4 +1,4 @@
-﻿@model Ticketing_System.Models.ErrorViewModel
+﻿@model Ticketing_System.Models.TicketInput
 @{
     ViewData["Title"] = "Update Ticket Page";
 }
@@ -14,8 +14,8 @@
             <div asp-validation-summary="ModelOnly" class="text-danger"></div>
             <div class="form-group">
                 <label class="control-label">Enter the Updated Text</label>
-                <textarea asp-for="RequestId" class="form-control"></textarea>
-                <span asp-validation-for="RequestId" class="text-danger"></span>
+                <textarea asp-for="Complaint" class="form-control"></textarea>
+                <span asp-validation-for="Complaint" class="text-danger"></span>
             </div>
             <div class="form-group">
                 <input type="submit" value="Update" class="btn btn-primary" />

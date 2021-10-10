@@ -1,4 +1,3 @@
-using System;
 
 namespace Ticketing_System.Models
 {

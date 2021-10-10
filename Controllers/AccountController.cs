@@ -1,13 +1,9 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Reflection.Metadata;
 using Microsoft.AspNetCore.Mvc;
 using Ticketing_System.Models;
 using System.Text;
 using Microsoft.Extensions.Configuration;
-using MySql.Data.MySqlClient;
-using Newtonsoft.Json;
-using System.Data;
 using System.Security.Claims;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Authentication;
@@ -53,7 +49,7 @@ namespace Ticketing_System.Controllers
                               "\" AND USERS.PASSWORD = \"" + md5 + "\";";
             DbAccess db = new DbAccess(_configuration);
             JArray resultJArray = db.Get(queryStr);
-            if (resultJArray.HasValues)
+            if (resultJArray!=null&&resultJArray.HasValues)
             {
                 TempData["username"] = user.Username;
                 TempData["auth"] = md5;

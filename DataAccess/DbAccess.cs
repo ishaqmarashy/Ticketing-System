@@ -45,7 +45,7 @@ namespace Ticketing_System.DataAccess
             }
             catch (Exception e)
             {
-                return new JArray(e.ToString());
+                return null;
 
             }
         }
