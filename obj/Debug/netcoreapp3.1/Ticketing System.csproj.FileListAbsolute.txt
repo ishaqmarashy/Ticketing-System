@@ -54,7 +54,6 @@ C:\Users\ishaq\source\repos\Ticketing System Solution\Ticketing System\bin\Debug
 C:\Users\ishaq\source\repos\Ticketing System Solution\Ticketing System\bin\Debug\netcoreapp3.1\Ubiety.Dns.Core.dll
 C:\Users\ishaq\source\repos\Ticketing System Solution\Ticketing System\bin\Debug\netcoreapp3.1\Zstandard.Net.dll
 C:\Users\ishaq\source\repos\Ticketing System Solution\Ticketing System\bin\Debug\netcoreapp3.1\Newtonsoft.Json.dll
-C:\Users\ishaq\source\repos\Ticketing System Solution\Ticketing System\bin\Debug\netcoreapp3.1\Npgsql.dll
 C:\Users\ishaq\source\repos\Ticketing System Solution\Ticketing System\bin\Debug\netcoreapp3.1\NuGet.Frameworks.dll
 C:\Users\ishaq\source\repos\Ticketing System Solution\Ticketing System\bin\Debug\netcoreapp3.1\System.Collections.Immutable.dll
 C:\Users\ishaq\source\repos\Ticketing System Solution\Ticketing System\bin\Debug\netcoreapp3.1\System.ComponentModel.Annotations.dll
