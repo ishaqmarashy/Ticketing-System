@@ -3,12 +3,15 @@ Designed and created a system for reporting software bugs with user and admin fu
 The purposed of this was to gain familiarity with C# and ASP.NET Core 3.1
 
 ## Features:
+1- Report, view, edit, and create tickets for software errors.
 
-    Report, view, edit, and create tickets for software errors
-    Access control for efficient admin management of tickets and users
-    Developed using MVC principles for structured architecture
-    The users can view, edit and create new tickets(limited CRUD operation accessibility).
-    Admins have a much higher level of access as they can edit, view and delete both tickets and users through administrative views. 
+2- Access control for efficient admin management of tickets and users.
+
+3- Developed using MVC principles for structured architecture.
+
+4- The users can view, edit and create new tickets(limited CRUD operation accessibility).
+
+5- Admins have a much higher level of access as they can edit, view and delete both tickets and users through administrative views. 
     
 ## Landing Page 
 ![image](https://github.com/ishaqmarashy/Ticketing-System/assets/34040118/8302614e-355d-4f77-a8bc-28af5faa0315)
