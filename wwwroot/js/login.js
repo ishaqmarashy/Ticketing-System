@@ -22,4 +22,3 @@ form.addEventListener('change', event => {
     }
 });
 
-form.onsubmit=reportValidity();

@@ -29,6 +29,7 @@ namespace Ticketing_System.DataAccess
                 var identifier = "";
                 var identifierMod = "";
                 var identifierLoc = postfix;
+                if (Jar!=null )
                 foreach (var col in Jar[0])
                 {
                     identifier = col.ToString().Replace("\"", "").Split(":")[0];

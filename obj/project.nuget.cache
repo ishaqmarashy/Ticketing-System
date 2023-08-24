@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "xh4qEMyNDPUkTo+3su4nTf/5bIArqPBJ2oYv5C1ZyG0O6+Dyg1Fv6pbuu64OsNOwpGCU4xvac6Y+luAN9Dsi+Q==",
+  "dgSpecHash": "gjKUONCPW6l3Gq6NAryujyPkeTaoWumyt73Os8Xg4na55vLkSQxYN0Oxa2sEeDhIxVoPizL4ed8O1V1/Kp4GVA==",
   "success": true,
-  "projectFilePath": "C:\\Users\\ishaq\\source\\repos\\Ticketing System Solution\\Ticketing System\\Ticketing System.csproj",
+  "projectFilePath": "D:\\Github\\Ticketing-System\\Ticketing System.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\ishaq\\.nuget\\packages\\bouncycastle.netcore\\1.8.5\\bouncycastle.netcore.1.8.5.nupkg.sha512",
     "C:\\Users\\ishaq\\.nuget\\packages\\dapper\\2.0.90\\dapper.2.0.90.nupkg.sha512",
@@ -167,7 +167,11 @@
     "C:\\Users\\ishaq\\.nuget\\packages\\system.xml.readerwriter\\4.3.0\\system.xml.readerwriter.4.3.0.nupkg.sha512",
     "C:\\Users\\ishaq\\.nuget\\packages\\system.xml.xdocument\\4.3.0\\system.xml.xdocument.4.3.0.nupkg.sha512",
     "C:\\Users\\ishaq\\.nuget\\packages\\system.xml.xmldocument\\4.3.0\\system.xml.xmldocument.4.3.0.nupkg.sha512",
-    "C:\\Users\\ishaq\\.nuget\\packages\\system.xml.xmlserializer\\4.3.0\\system.xml.xmlserializer.4.3.0.nupkg.sha512"
+    "C:\\Users\\ishaq\\.nuget\\packages\\system.xml.xmlserializer\\4.3.0\\system.xml.xmlserializer.4.3.0.nupkg.sha512",
+    "C:\\Users\\ishaq\\.nuget\\packages\\microsoft.windowsdesktop.app.ref\\3.1.0\\microsoft.windowsdesktop.app.ref.3.1.0.nupkg.sha512",
+    "C:\\Users\\ishaq\\.nuget\\packages\\microsoft.netcore.app.ref\\3.1.0\\microsoft.netcore.app.ref.3.1.0.nupkg.sha512",
+    "C:\\Users\\ishaq\\.nuget\\packages\\microsoft.aspnetcore.app.ref\\3.1.10\\microsoft.aspnetcore.app.ref.3.1.10.nupkg.sha512",
+    "C:\\Users\\ishaq\\.nuget\\packages\\microsoft.netcore.app.host.win-x64\\3.1.32\\microsoft.netcore.app.host.win-x64.3.1.32.nupkg.sha512"
   ],
   "logs": []
 }
