@@ -12,7 +12,7 @@ The purposed of this was to gain familiarity with C# and ASP.NET Core 3.1
 4- The users can view, edit and create new tickets(limited CRUD operation accessibility).
 
 5- Admins have a much higher level of access as they can edit, view and delete both tickets and users through administrative views. 
-    
+
 ## Landing Page 
 ![image](https://github.com/ishaqmarashy/Ticketing-System/assets/34040118/8302614e-355d-4f77-a8bc-28af5faa0315)
 
@@ -27,6 +27,8 @@ The purposed of this was to gain familiarity with C# and ASP.NET Core 3.1
 
 ## Read Tickets and Update Tickets
 ![image](https://github.com/ishaqmarashy/Ticketing-System/assets/34040118/a08382ec-9c87-4266-bf46-89eecbc4dfbd)
+
+## Read Tickets and Update Tickets
 ![image](https://github.com/ishaqmarashy/Ticketing-System/assets/34040118/0f6e23ba-e200-4484-9250-b2514cee4f3b)
 
 ## Administrative Page to View All Tickets and Delete
